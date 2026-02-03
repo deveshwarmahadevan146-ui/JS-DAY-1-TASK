@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Differentiation Demo</title>
+
+    <style>
+      p.para1 {
+        color: blue;
+      }
+
+      p#para1 {
+        color: red;
+      }
+
+      #para1 p {
+        color: green;
+      }
+
+      div span {
+        background-color: yellow;
+      }
+
+      div > span {
+        background-color: orange;
+      }
+
+      .important-test {
+        color: purple !important;
+      }
+
+      p {
+        color: black;
+      }
+
+      .before-after::before {
+        content: "Before ";
+        color: red;
+      }
+
+      .before-after::after {
+        content: " After";
+        color: blue;
+      }
+
+      a:link {
+        color: blue;
+      }
+
+      a:visited {
+        color: purple;
+      }
+
+      a:hover {
+        color: green;
+      }
+
+      a:active {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>1. p.para1 vs p#para1 vs #para1 p</h3>
+
+    <p class="para1">This is p.para1</p>
+
+    <p id="para1">This is p#para1</p>
+
+    <div id="para1">
+      <p>This is #para1 p</p>
+    </div>
+
+    <hr />
+
+    <h3>2. div span vs div > span</h3>
+
+    <div>
+      <span>This is Direct child span</span>
+      <p>
+        <span>This is Nested span</span>
+      </p>
+    </div>
+
+    <hr />
+
+    <h3>3. !important</h3>
+
+    <p class="important-test">This text is purple because of !important</p>
+
+    <hr>
+
+    <h3>4. ::before and ::after</h3>
+
+    <p class="before-after">Text</p>
+
+    <hr>
+
+    <h3>5. a:link, a:visited, a:hover, a:active</h3>
+
+    <a href="https://www.google.com" target="_blank">
+      click this link
+    </a>
+  </body>
+</html>
